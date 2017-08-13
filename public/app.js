@@ -23,3 +23,8 @@ learnjs.showView = function(hash) {
     $('.view-container').empty().append(viewFn(hashParts[1]));
   }
 }
+
+learnjs.problemView = function(problemNumber) {
+  var title = 'Problem #' + problemNumber + ' Coming soon!';
+  return $('<div class="problem-view">').text(title);
+}
