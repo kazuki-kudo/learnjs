@@ -28,3 +28,14 @@ learnjs.problemView = function(problemNumber) {
   var title = 'Problem #' + problemNumber + ' Coming soon!';
   return $('<div class="problem-view">').text(title);
 }
+
+learnjs.appOnReady = function() {
+  learnjs.showView(window.location.hash);
+}
+
+learnjs.appOnReady = function() {
+  window.onhashchange = function() {
+    learnjs.showView(window.location.hash);
+  };
+  learnjs.showView(window.location.hash);
+}
